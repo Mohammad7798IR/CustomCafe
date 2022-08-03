@@ -7,7 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="6.0.7" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CustomDrink.Api\CustomDrink.Api.csproj" />
+    <ProjectReference Include="..\CustomDrink.Common\CustomDrink.Common.csproj" />
+    <ProjectReference Include="..\CustomDrink.DataAccess\CustomDrink.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>
