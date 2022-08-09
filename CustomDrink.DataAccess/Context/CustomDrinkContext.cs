@@ -51,6 +51,16 @@ namespace CustomDrink.DataAccess.Context
                 .HasForeignKey(fk => fk.UserId);
 
             #endregion
+
+
+            #region Store
+
+            modelBuilder.Entity<Store>()
+                .HasOne(a => a.User)
+                .WithOne(a => a.Store)
+                .HasForeignKey<Store>(fk => fk.UserId);
+
+            #endregion
         }
     }
 }
