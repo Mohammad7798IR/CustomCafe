@@ -8,7 +8,15 @@
 
   <ItemGroup>
     <Folder Include="Converters\" />
-    <Folder Include="ClassHelpers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.2.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CustomDrink.Model\CustomDrink.Model.csproj" />
   </ItemGroup>
 
 </Project>

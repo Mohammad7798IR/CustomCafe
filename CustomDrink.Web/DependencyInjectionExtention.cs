@@ -1,5 +1,7 @@
 ﻿using CustomDrink.DataAccess.Context;
 using Microsoft.EntityFrameworkCore;
+using FluentValidation.AspNetCore;
+using CustomDrink.Common.ClassHelpers;
 
 namespace CustomDrink.Web
 {
@@ -10,5 +12,8 @@ namespace CustomDrink.Web
             {
                 options.UseInMemoryDatabase(databaseName: "InMem");
             });
+
+        internal static IServiceCollection InjectFluentValidation(this IServiceCollection services) =>
+           services.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<StoreValidations>());
     }
 }

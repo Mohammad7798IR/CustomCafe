@@ -12,7 +12,8 @@ builder.Services.AddSwaggerGen();
 #region Dependency
 
 builder.Services
-    .InjectContext();
+    .InjectContext()
+    .InjectFluentValidation();
 
 #endregion
 
